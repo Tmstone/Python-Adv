@@ -1,0 +1,34 @@
+pip install Django==1.11.9 -
+Installed the Django environment in the virtual environment
+
+pip list - 
+listed the all the current packages in the py3Env
+
+deactivate -
+closes the virtual environment
+
+pip3 list -
+lists the packages that were originally installed when pip install was first run
+
+source myEnvironments/py3Env/bin/activate
+activated the virtual environment
+
+pip install py3Env/bin/activate
+The terminal returns that this requirement was already satisfied
+
+pip freeze
+This shows the versions of the local packages installed in the environment - only.
+List shows all the packages associated with the environment, including pip and its versions.
+
+pip freeze > requirements.txt 
+created an ,txt file called requirements
+The versions of Django and pytz are listed
+
+pip uninstall Django
+removes the Django package from the virtual environment
+
+pip show Django
+no response - package not installed 
+
+pip search Flask
+no response - package not installed 

@@ -27,7 +27,8 @@ class IceCreamStand(Restaurant):
     ''' Represents objects of the restaurant specific to an ice cream stand '''
     def __init__(self, name, cuisine_type):
         super().__init__(name, cuisine_type)
-        self.flavors = ""
+        self.flavors = []
+
 
 new_restaurant = Restaurant('Dat Jerk', 'Caribbean Food')
 new_restaurant.describe_restaurant()

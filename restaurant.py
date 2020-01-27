@@ -23,6 +23,12 @@ class Restaurant():
     def increment_number_served(self, customers):
         self.number_served += customers
 
+class IceCreamStand(Restaurant):
+    ''' Represents objects of the restaurant specific to an ice cream stand '''
+    def __init__(self, name, cuisine_type):
+        super().__init__(name, cuisine_type)
+        self.flavors = ""
+
 new_restaurant = Restaurant('Dat Jerk', 'Caribbean Food')
 new_restaurant.describe_restaurant()
 new_restaurant.open_restaurant()
@@ -40,3 +46,7 @@ her_restaurant.describe_restaurant()
 her_restaurant.open_restaurant()
 her_restaurant.increment_number_served(300)
 her_restaurant.service()
+
+my_iceCream = IceCreamStand('Dipping Dots', 'Ice Cream Pellets')
+my_iceCream.describe_restaurant()
+my_iceCream.open_restaurant()

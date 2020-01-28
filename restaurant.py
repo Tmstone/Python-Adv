@@ -6,7 +6,7 @@ class Restaurant():
         self.number_served = 0
     
     def describe_restaurant(self):
-        print(self.name.title() + " produces " + self.cuisine_type + ".")
+        print(self.name.title() + " serves " + self.cuisine_type + ".")
 
     def open_restaurant(self):
         print("The " + self.name.title() + " is open.")
@@ -29,6 +29,10 @@ class IceCreamStand(Restaurant):
         super().__init__(name, cuisine_type)
         self.flavors = []
 
+    def showFlavors(self):
+        print('This Ice Cream Stand severs the following flavors:')
+        for flavor in self.flavors:
+            print(flavor.title())
 
 new_restaurant = Restaurant('Dat Jerk', 'Caribbean Food')
 new_restaurant.describe_restaurant()
@@ -51,3 +55,7 @@ her_restaurant.service()
 my_iceCream = IceCreamStand('Dipping Dots', 'Ice Cream Pellets')
 my_iceCream.describe_restaurant()
 my_iceCream.open_restaurant()
+my_iceCream.flavors = ['Rum & Raisin', 'Strawberry', 'Vanilla', 'Mint Chocolate']
+my_iceCream.showFlavors()
+my_iceCream.increment_number_served(45)
+my_iceCream.service()
